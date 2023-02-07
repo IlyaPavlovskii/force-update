@@ -10,10 +10,11 @@ dependencyResolutionManagement {
     }
 }
 
-// rootProject.name = "humans-mvi"
+// rootProject.name = "change-theme-domain"
 
 includeBuild("build-logic")
 
-// include(":mvi-core")
-// include(":mvi-sample:domain")
-// include(":mvi-sample:presentation")
+include(":change-theme-android-presentation")
+include(":change-theme-domain")
+include(":sample-app")
+include(":sample-app-ui")

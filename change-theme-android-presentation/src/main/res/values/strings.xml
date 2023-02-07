@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="change_theme__back_content_description">Change theme back button</string>
+    <string name="change_theme__title">App theme</string>
+    <string name="change_theme__light_theme">Light theme</string>
+    <string name="change_theme__dark_theme">Dark theme</string>
+    <string name="change_theme__system_theme">System theme</string>
+</resources>

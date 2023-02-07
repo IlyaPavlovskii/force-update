@@ -1,0 +1,11 @@
+plugins {
+    id("multiplatform-library-convention")
+}
+
+dependencies {
+    androidMainImplementation(libs.androidx.appcompat)
+    commonMainImplementation(libs.mpp.kotlinx.coroutines)
+    commonMainImplementation(libs.net.humans.kmm.mvi.core)
+    commonMainImplementation(libs.io.github.ilyapavlovskii.kmm.koin)
+    commonMainImplementation(libs.koin.core)
+}
