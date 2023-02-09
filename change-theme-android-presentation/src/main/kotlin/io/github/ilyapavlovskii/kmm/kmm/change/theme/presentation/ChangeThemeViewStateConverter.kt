@@ -3,28 +3,28 @@ package io.github.ilyapavlovskii.kmm.kmm.change.theme.presentation
 import io.github.ilyapavlovskii.kmm.change.theme.domain.ChangeThemeRedux
 import io.github.ilyapavlovskii.kmm.change.theme.presentation.R
 import net.humans.kmm.mvi.ViewStateConverter
-import net.humans.kmm.mvi.sample.domain.module.AndroidTheme
+import net.humans.kmm.mvi.sample.domain.module.AndroidComposableTheme
 
 internal class ChangeThemeViewStateConverter :
     ViewStateConverter<ChangeThemeRedux.State, ChangeThemeViewState> {
     override fun convert(state: ChangeThemeRedux.State): ChangeThemeViewState {
         return ChangeThemeViewState(
-            items = (state.selectedTheme as? AndroidTheme)?.let { selectedAndroidTheme ->
-                state.themes.filterIsInstance<AndroidTheme>()
+            items = (state.selectedTheme as? AndroidComposableTheme)?.let { selectedAndroidTheme ->
+                state.themes.filterIsInstance<AndroidComposableTheme>()
                     .map { androidTheme ->
                         androidTheme.toPresentationItem(selectedAndroidTheme)
                     }
-            }.orEmpty()
+            }.orEmpty(),
         )
     }
 
-    private fun AndroidTheme.toPresentationItem(
-        selectedTheme: AndroidTheme
+    private fun AndroidComposableTheme.toPresentationItem(
+        selectedTheme: AndroidComposableTheme
     ): ChangeThemeViewState.Item = ChangeThemeViewState.Item(
         titleRes = when (this) {
-            AndroidTheme.SYSTEM -> R.string.change_theme__system_theme
-            AndroidTheme.LIGHT -> R.string.change_theme__light_theme
-            AndroidTheme.DARK -> R.string.change_theme__dark_theme
+            AndroidComposableTheme.SYSTEM -> R.string.change_theme__system_theme
+            AndroidComposableTheme.LIGHT -> R.string.change_theme__light_theme
+            AndroidComposableTheme.DARK -> R.string.change_theme__dark_theme
         },
         selected = this == selectedTheme,
         domainMeta = ChangeThemeViewState.Item.DomainMeta(theme = this)

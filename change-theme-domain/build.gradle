@@ -2,8 +2,26 @@ plugins {
     id("multiplatform-library-convention")
 }
 
+android {
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.4.0"
+    }
+}
+
 dependencies {
     androidMainImplementation(libs.androidx.appcompat)
+    androidMainImplementation(libs.androidx.compose.runtime)
+    androidMainImplementation(libs.koin.android)
+    androidMainImplementation(libs.koin.core)
+    androidMainImplementation(libs.koin.compose)
+    androidMainImplementation('org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4')
+
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.compose.material3)
+
     commonMainImplementation(libs.mpp.kotlinx.coroutines)
     commonMainImplementation(libs.net.humans.kmm.mvi.core)
     commonMainImplementation(libs.io.github.ilyapavlovskii.kmm.koin)

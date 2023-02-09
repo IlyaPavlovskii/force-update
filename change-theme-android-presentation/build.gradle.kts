@@ -32,6 +32,9 @@ dependencies {
     implementation(libs.koin.android)
     implementation(libs.koin.compose)
     implementation(libs.koin.core)
+
+    implementation(libs.androidx.appcompat)
+
     implementation(project(":change-theme-domain"))
     implementation(project(":sample-app-ui"))
 

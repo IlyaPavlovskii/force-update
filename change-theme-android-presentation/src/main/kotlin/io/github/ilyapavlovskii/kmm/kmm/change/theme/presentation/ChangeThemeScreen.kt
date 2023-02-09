@@ -8,6 +8,7 @@ import org.koin.androidx.compose.getViewModel
 fun ChangeThemeScreen(
     onBackClick: () -> Unit,
 ) {
+
     val viewModel: ChangeThemeViewModel = getViewModel()
     val viewState = viewModel.viewState.collectAsState()
 

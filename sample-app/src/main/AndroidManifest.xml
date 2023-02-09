@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="io.github.ilyapavlovskii.kmm.change.theme.sample">
 
     <application
@@ -10,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:name=".ChangeThemeApplication"
+        android:forceDarkAllowed="true"
         android:theme="@style/Theme.ChangeThemeSample"
+        tools:targetApi="q"
         >
         <activity
             android:name=".MainActivity"
