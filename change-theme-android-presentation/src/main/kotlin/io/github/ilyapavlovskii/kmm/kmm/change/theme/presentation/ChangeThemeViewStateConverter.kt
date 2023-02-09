@@ -30,4 +30,3 @@ internal class ChangeThemeViewStateConverter :
         domainMeta = ChangeThemeViewState.Item.DomainMeta(theme = this)
     )
 }
-

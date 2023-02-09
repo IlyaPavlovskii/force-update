@@ -15,8 +15,4 @@ internal data class ChangeThemeViewState(
             val theme: Theme
         )
     }
-
-    sealed class Action {
-        data class SetTheme(val uiMode: Int) : Action()
-    }
 }

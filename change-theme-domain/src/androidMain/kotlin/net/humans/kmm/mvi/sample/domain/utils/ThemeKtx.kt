@@ -18,9 +18,10 @@ fun AndroidComposableTheme.isDarkTheme(): Boolean = when (this) {
 @Composable
 fun ComponentCallbacks.isDarkTheme(): Boolean {
     val getThemeStateUseCase: GetThemeStateUseCase = get()
-    return (getThemeStateUseCase.getTheme().collectAsState()
-        .value
-        .let { it as? AndroidComposableTheme }
-        ?: AndroidComposableTheme.SYSTEM
+    return (
+        getThemeStateUseCase.getTheme().collectAsState()
+            .value
+            .let { it as? AndroidComposableTheme }
+            ?: AndroidComposableTheme.SYSTEM
         ).isDarkTheme()
 }
