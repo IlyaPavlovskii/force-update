@@ -19,6 +19,7 @@ dependencies {
     implementation("com.android.tools.build:gradle:$agpVersion")
     implementation("io.gitlab.arturbosch.detekt:detekt-gradle-plugin:$detektVersion")
     implementation("org.jlleitschuh.gradle:ktlint-gradle:$ktlintVersion")
+    implementation("com.vanniktech:gradle-maven-publish-plugin:0.24.0")
 }
 
 project.tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {

@@ -14,7 +14,7 @@ dependencyResolutionManagement {
 
 includeBuild("build-logic")
 
-include(":change-theme-android-presentation")
+include(":change-theme-android-compose-presentation")
 include(":change-theme-domain")
 include(":sample-app")
 include(":sample-app-ui")

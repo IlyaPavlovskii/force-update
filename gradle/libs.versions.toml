@@ -1,5 +1,5 @@
 [versions]
-kotlinVersion = "1.8.0"
+kotlinVersion = "1.8.10"
 coroutinesVersion = "1.6.4"
 # multiplatform
 kermitVersion = "1.2.2"
