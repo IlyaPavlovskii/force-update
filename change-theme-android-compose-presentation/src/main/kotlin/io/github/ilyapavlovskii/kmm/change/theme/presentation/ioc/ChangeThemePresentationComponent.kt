@@ -1,10 +1,10 @@
-package io.github.ilyapavlovskii.kmm.kmm.change.theme.presentation.ioc
+package io.github.ilyapavlovskii.kmm.change.theme.presentation.ioc
 
 import io.github.ilyapavlovskii.kmm.change.theme.domain.ChangeThemeRedux
 import io.github.ilyapavlovskii.kmm.change.theme.domain.ChangeThemeRedux.State
-import io.github.ilyapavlovskii.kmm.kmm.change.theme.presentation.ChangeThemeViewModel
-import io.github.ilyapavlovskii.kmm.kmm.change.theme.presentation.ChangeThemeViewState
-import io.github.ilyapavlovskii.kmm.kmm.change.theme.presentation.ChangeThemeViewStateConverter
+import io.github.ilyapavlovskii.kmm.change.theme.presentation.ChangeThemeViewModel
+import io.github.ilyapavlovskii.kmm.change.theme.presentation.ChangeThemeViewState
+import io.github.ilyapavlovskii.kmm.change.theme.presentation.ChangeThemeViewStateConverter
 import io.github.ilyapavlovskii.kmm.koin.Component
 import net.humans.kmm.mvi.ViewStateConverter
 import org.koin.androidx.viewmodel.dsl.viewModel

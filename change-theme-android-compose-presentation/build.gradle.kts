@@ -37,7 +37,7 @@ dependencies {
     implementation(libs.androidx.appcompat)
 
     implementation(project(":change-theme-domain"))
-    implementation(project(":sample-app-ui"))
+    //implementation(project(":sample-app-ui"))
 
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)

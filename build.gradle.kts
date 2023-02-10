@@ -22,8 +22,8 @@ subprojects {
         mavenCentral()
         mavenLocal()
     }
-    group = "net.humans.kmm.mvi"
-    version = "2023.02.02"
+    group = "io.github.ilyapavlovskii.kmm.change.theme"
+    version = "2023.02.10"
 
     setupJavaTarget(this)
 }

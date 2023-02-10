@@ -1,7 +1,6 @@
-package io.github.ilyapavlovskii.kmm.kmm.change.theme.presentation
+package io.github.ilyapavlovskii.kmm.change.theme.presentation
 
 import io.github.ilyapavlovskii.kmm.change.theme.domain.ChangeThemeRedux
-import io.github.ilyapavlovskii.kmm.change.theme.presentation.R
 import net.humans.kmm.mvi.ViewStateConverter
 import net.humans.kmm.mvi.sample.domain.module.AndroidComposableTheme
 

@@ -12,7 +12,6 @@ project.version = project.version.toString() + versionSuffix
 mavenPublishing {
     //publishToMavenCentral(SonatypeHost.S01)
 
-
     coordinates(
         groupId = project.group.toString(),
         artifactId = project.name,
