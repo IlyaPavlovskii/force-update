@@ -1,5 +1,6 @@
 plugins {
     id("android-library-convention")
+    id("publish-library-convention")
 }
 
 android {
@@ -8,7 +9,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.0"
+        kotlinCompilerExtensionVersion = "1.4.2"
     }
     packagingOptions {
         resources {
@@ -36,7 +37,7 @@ dependencies {
     implementation(libs.androidx.appcompat)
 
     implementation(project(":change-theme-domain"))
-    implementation(project(":sample-app-ui"))
+    //implementation(project(":sample-app-ui"))
 
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)

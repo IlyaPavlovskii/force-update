@@ -16,14 +16,29 @@ plugins {
 }
 
 subprojects {
+    val githubProperties = java.util.Properties()
+    val propsFile = file("github.properties")
+    if (propsFile.isFile) {
+        propsFile.inputStream().use { fis -> githubProperties.load(fis) }
+    } else {
+        githubProperties["github_username"] = System.getenv("GITHUB_USERNAME") ?: ""
+        githubProperties["github_password"] = System.getenv("GITHUB_PASSWORD") ?: ""
+    }
     apply(plugin = "configuration-ktlint-convention")
     repositories {
         google()
         mavenCentral()
         mavenLocal()
+        maven {
+            url = uri("https://maven.pkg.github.com/IlyaPavlovskii/koin-v3-utils")
+            credentials {
+                username = githubProperties.getProperty("github_username")
+                password = githubProperties.getProperty("github_password")
+            }
+        }
     }
-    group = "net.humans.kmm.mvi"
-    version = "2023.02.02"
+    group = "io.github.ilyapavlovskii.kmm.change.theme"
+    version = "2023.02.10"
 
     setupJavaTarget(this)
 }

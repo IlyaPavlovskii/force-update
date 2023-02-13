@@ -1,4 +1,4 @@
-package io.github.ilyapavlovskii.kmm.kmm.change.theme.presentation
+package io.github.ilyapavlovskii.kmm.change.theme.presentation
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -22,11 +22,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.vectorResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import io.github.ilyapavlovskii.kmm.change.theme.domain.model.EmptyTheme
-import io.github.ilyapavlovskii.kmm.change.theme.presentation.R
-import io.github.ilyapavlovskii.kmm.change.theme.ui.ChangeThemeTheme
 
 @Composable
 internal fun ChangeThemeView(
@@ -102,32 +98,32 @@ internal fun ChangeThemeSelectorRow(
     }
 }
 
-@Preview
-@Composable
-internal fun PreviewChangeThemeView() {
-    ChangeThemeTheme {
-        ChangeThemeView(
-            viewState = ChangeThemeViewState(
-                items = listOf(
-                    ChangeThemeViewState.Item(
-                        titleRes = R.string.change_theme__system_theme,
-                        selected = false,
-                        domainMeta = ChangeThemeViewState.Item.DomainMeta(EmptyTheme),
-                    ),
-                    ChangeThemeViewState.Item(
-                        titleRes = R.string.change_theme__light_theme,
-                        selected = true,
-                        domainMeta = ChangeThemeViewState.Item.DomainMeta(EmptyTheme),
-                    ),
-                    ChangeThemeViewState.Item(
-                        titleRes = R.string.change_theme__dark_theme,
-                        selected = false,
-                        domainMeta = ChangeThemeViewState.Item.DomainMeta(EmptyTheme),
-                    ),
-                )
-            ),
-            onBackClick = {},
-            onItemSelected = {},
-        )
-    }
-}
+// @Preview
+// @Composable
+// internal fun PreviewChangeThemeView() {
+//     ChangeThemeTheme {
+//         ChangeThemeView(
+//             viewState = ChangeThemeViewState(
+//                 items = listOf(
+//                     ChangeThemeViewState.Item(
+//                         titleRes = R.string.change_theme__system_theme,
+//                         selected = false,
+//                         domainMeta = ChangeThemeViewState.Item.DomainMeta(EmptyTheme),
+//                     ),
+//                     ChangeThemeViewState.Item(
+//                         titleRes = R.string.change_theme__light_theme,
+//                         selected = true,
+//                         domainMeta = ChangeThemeViewState.Item.DomainMeta(EmptyTheme),
+//                     ),
+//                     ChangeThemeViewState.Item(
+//                         titleRes = R.string.change_theme__dark_theme,
+//                         selected = false,
+//                         domainMeta = ChangeThemeViewState.Item.DomainMeta(EmptyTheme),
+//                     ),
+//                 )
+//             ),
+//             onBackClick = {},
+//             onItemSelected = {},
+//         )
+//     }
+// }

@@ -1,4 +1,4 @@
-package io.github.ilyapavlovskii.kmm.kmm.change.theme.presentation
+package io.github.ilyapavlovskii.kmm.change.theme.presentation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
