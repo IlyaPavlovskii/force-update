@@ -15,8 +15,8 @@ fun readGithubProperties(): Properties {
         ?.also { file ->
             file.inputStream().use { fis -> githubProperties.load(fis) }
         } ?: run {
-        githubProperties["github_username"] = System.getenv("GITHUB_USERNAME") ?: "-"
-        githubProperties["github_password"] = System.getenv("GITHUB_PASSWORD") ?: "-"
+        githubProperties["github_username"] = System.getenv("GITHUB_USERNAME") ?: ""
+        githubProperties["github_password"] = System.getenv("GITHUB_PASSWORD") ?: ""
     }
     return githubProperties
 }
@@ -66,6 +66,4 @@ mavenPublishing {
             developerConnection.set("scm:git:ssh://github.com/IlyaPavlovskii/change-theme.git")
         }
     }
-
-    signAllPublications()
 }
