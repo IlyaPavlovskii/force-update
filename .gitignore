@@ -12,3 +12,4 @@ local.properties
 #OSX
 .DS_Store
 successful_lint_hash
+github.properties

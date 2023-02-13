@@ -1,17 +1,40 @@
 @file:Suppress("UnstableApiUsage")
 
-import com.vanniktech.maven.publish.SonatypeHost
+import java.util.Properties
 
 plugins {
     id("com.vanniktech.maven.publish")
 }
 
-val versionSuffix = "-SNAPSHOT"
-project.version = project.version.toString() + versionSuffix
+project.version = project.version.toString()
+
+fun readGithubProperties(): Properties {
+    val githubProperties = Properties()
+    project.rootProject.file("github.properties")
+        .takeIf { file -> file.exists() && file.isFile }
+        ?.also { file ->
+            file.inputStream().use { fis -> githubProperties.load(fis) }
+        } ?: run {
+        githubProperties["github_username"] = System.getenv("GITHUB_USERNAME") ?: "-"
+        githubProperties["github_password"] = System.getenv("GITHUB_PASSWORD") ?: "-"
+    }
+    return githubProperties
+}
+
+publishing {
+    repositories {
+        maven {
+            url = uri("https://maven.pkg.github.com/IlyaPavlovskii/change-theme")
+            val githubProperties: Properties = readGithubProperties()
+            credentials {
+                username = githubProperties.getProperty("github_username")
+                password = githubProperties.getProperty("github_password")
+            }
+        }
+    }
+}
 
 mavenPublishing {
-    //publishToMavenCentral(SonatypeHost.S01)
-
     coordinates(
         groupId = project.group.toString(),
         artifactId = project.name,
