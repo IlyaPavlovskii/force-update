@@ -2,7 +2,7 @@
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="io.github.ilyapavlovskii.kmm.change.theme.sample">
+    package="io.github.ilyapavlovskii.kmm.force.update.sample">
 
     <application
         android:allowBackup="true"
@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:name=".ChangeThemeApplication"
+        android:name=".ForceUpdateApplication"
         android:forceDarkAllowed="true"
         android:theme="@style/Theme.ChangeThemeSample"
         tools:targetApi="q"

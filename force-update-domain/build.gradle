@@ -1,0 +1,23 @@
+plugins {
+    id("multiplatform-library-convention")
+    id("publish-library-convention")
+}
+
+android {
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.4.3"
+    }
+}
+
+dependencies {
+    androidMainImplementation(libs.androidx.appcompat)
+    androidMainImplementation(libs.androidx.compose.runtime)
+
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.compose.material3)
+
+    commonMainImplementation(libs.mpp.kotlinx.coroutines)
+}

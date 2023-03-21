@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="force_update__medium_title">Update available</string>
+    <string name="force_update__medium_description">New update is available. Recommends you to update to the latest version.</string>
+    <string name="force_update__button_update">Update</string>
+    <string name="force_update__button_cancel">Cancel</string>
+</resources>

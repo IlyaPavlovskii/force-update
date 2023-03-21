@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "io.github.ilyapavlovskii.kmm.change.theme.sample"
+    namespace = "io.github.ilyapavlovskii.kmm.force.update.sample"
     defaultConfig {
         applicationId = "io.github.ilyapavlovskii.kmm.change.theme.sample"
     }
@@ -19,13 +19,10 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
-    implementation(libs.io.github.ilyapavlovskii.kmm.koin)
-    implementation(libs.koin.android)
-    implementation(libs.koin.compose)
-    implementation(libs.koin.core)
     implementation(libs.androidx.appcompat)
-    implementation(project(":change-theme-android-compose-presentation"))
-    implementation(project(":change-theme-domain"))
+
+    implementation(project(":force-update-domain"))
+    implementation(project(":force-update-android-compose-presentation"))
     implementation(project(":sample-app-ui"))
 
     debugImplementation(libs.androidx.compose.ui.tooling)

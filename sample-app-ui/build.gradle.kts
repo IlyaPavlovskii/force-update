@@ -3,12 +3,12 @@ plugins {
 }
 
 android {
-    namespace = "io.github.ilyapavlovskii.kmm.change.theme.ui"
+    namespace = "io.github.ilyapavlovskii.kmm.force.update.ui"
     buildFeatures {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.2"
+        kotlinCompilerExtensionVersion = "1.4.3"
     }
     packagingOptions {
         resources {
@@ -27,11 +27,6 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
-    implementation(libs.io.github.ilyapavlovskii.kmm.koin)
-    implementation(libs.koin.android)
-    implementation(libs.koin.compose)
-    implementation(libs.koin.core)
-    implementation(project(":change-theme-domain"))
 
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
