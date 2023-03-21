@@ -6,21 +6,20 @@ import io.github.ilyapavlovskii.kmm.force.update.model.ForceUpdateType
 import io.github.ilyapavlovskii.kmm.force.update.usecase.GetForceUpdateEventFlowUseCase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 
-internal class ForceUpdateViewModel(
+internal class AppUpdateViewModel(
     private val getForceUpdateEventFlowUseCase: GetForceUpdateEventFlowUseCase,
 ) : ViewModel() {
-    val viewState: StateFlow<ForceUpdateViewState> = getForceUpdateEventFlowUseCase.event
-        .map(::ForceUpdateViewState)
+    val viewState: StateFlow<AppUpdateViewState> = getForceUpdateEventFlowUseCase.event
+        .map(::AppUpdateViewState)
         .stateIn(
             scope = CoroutineScope(Dispatchers.Default),
             started = SharingStarted.Lazily,
-            initialValue = ForceUpdateViewState(event = ForceUpdateType.ABSENT),
+            initialValue = AppUpdateViewState(event = ForceUpdateType.ABSENT),
         )
 
     companion object {
@@ -29,8 +28,8 @@ internal class ForceUpdateViewModel(
             getForceUpdateEventFlowUseCase: GetForceUpdateEventFlowUseCase
         ): ViewModelProvider.Factory = object : ViewModelProvider.Factory {
             override fun <T : ViewModel> create(modelClass: Class<T>): T {
-                return if (modelClass == ForceUpdateViewModel::class.java) {
-                    ForceUpdateViewModel(
+                return if (modelClass == AppUpdateViewModel::class.java) {
+                    AppUpdateViewModel(
                         getForceUpdateEventFlowUseCase = getForceUpdateEventFlowUseCase,
                     ) as T
                 } else {

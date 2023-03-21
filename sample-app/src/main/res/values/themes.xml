@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.ChangeThemeSample" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Theme.ForceUpdateSample" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="force_update__force_icon_raster">@drawable/logo</item>
+    </style>
 </resources>

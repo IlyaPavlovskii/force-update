@@ -9,7 +9,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import io.github.ilyapavlovskii.kmm.force.update.model.ForceUpdateType
-import io.github.ilyapavlovskii.kmm.force.update.presentation.ForceUpdateScreen
+import io.github.ilyapavlovskii.kmm.force.update.presentation.AppUpdateScreen
 import io.github.ilyapavlovskii.kmm.force.update.sample.ui.MainScreen
 import io.github.ilyapavlovskii.kmm.force.update.ui.ForceUpdateTheme
 
@@ -24,7 +24,7 @@ internal class MainActivity : ComponentActivity() {
                 ) {
                     MainScreen(useCase = useCase)
 
-                    ForceUpdateScreen(
+                    AppUpdateScreen(
                         getForceUpdateEventFlowUseCase = useCase,
                         applicationUri = Uri.parse("https://play.google.com/store/apps/details?id=by.bulba.ipsc.calculator"),
                         onCancelListener = { useCase.update(ForceUpdateType.ABSENT) },

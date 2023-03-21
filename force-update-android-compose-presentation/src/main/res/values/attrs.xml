@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="force_update__force_icon_vector" format="reference" />
+    <attr name="force_update__force_icon_raster" format="reference" />
+    <attr name="force_update__medium_title" format="string" />
+    <attr name="force_update__medium_description" format="string" />
+    <attr name="force_update__force_title" format="string" />
+    <attr name="force_update__force_description" format="string" />
+    <attr name="force_update__button_update" format="string" />
+    <attr name="force_update__button_cancel" format="string" />
+</resources>

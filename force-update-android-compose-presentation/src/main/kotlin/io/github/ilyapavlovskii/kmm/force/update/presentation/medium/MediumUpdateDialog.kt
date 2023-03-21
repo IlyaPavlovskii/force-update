@@ -16,6 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import io.github.ilyapavlovskii.kmm.force.update.presentation.R
+import io.github.ilyapavlovskii.kmm.force.update.presentation.stringFromAttribute
 import io.github.ilyapavlovskii.kmm.force.update.ui.ForceUpdateTheme
 import kotlinx.coroutines.launch
 
@@ -73,12 +74,14 @@ private fun MediumUpdateDialogContent(
     ) {
         Text(
             modifier = style.titleModifier,
-            text = stringResource(R.string.force_update__medium_title),
+            text = stringFromAttribute(attributeId = R.attr.force_update__medium_title)
+                ?: stringResource(R.string.force_update__medium_title),
             style = style.titleStyle,
         )
         Text(
             modifier = style.descriptionModifier,
-            text = stringResource(R.string.force_update__medium_description),
+            text = stringFromAttribute(attributeId = R.attr.force_update__medium_description)
+                ?: stringResource(R.string.force_update__medium_description),
             style = style.descriptionStyle,
         )
         OutlinedButton(
@@ -88,7 +91,8 @@ private fun MediumUpdateDialogContent(
             colors = style.updateButtonColors,
         ) {
             Text(
-                text = stringResource(R.string.force_update__button_update),
+                text = stringFromAttribute(attributeId = R.attr.force_update__button_update)
+                    ?: stringResource(R.string.force_update__button_update),
                 modifier = style.updateButtonTextModifier,
                 style = style.updateButtonTextStyle,
             )
@@ -100,7 +104,8 @@ private fun MediumUpdateDialogContent(
             colors = style.cancelButtonColors,
         ) {
             Text(
-                text = stringResource(R.string.force_update__button_cancel),
+                text = stringFromAttribute(attributeId = R.attr.force_update__button_cancel)
+                    ?: stringResource(R.string.force_update__button_cancel),
                 modifier = style.cancelButtonTextModifier,
                 style = style.cancelButtonTextStyle,
             )

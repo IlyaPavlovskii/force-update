@@ -1,5 +1,6 @@
-package io.github.ilyapavlovskii.kmm.force.update.presentation.medium
+package io.github.ilyapavlovskii.kmm.force.update.presentation.force
 
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.ButtonColors
@@ -12,12 +13,11 @@ import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 
-data class MediumUpdateDialogStyle(
-    val sheetShape: Shape = RoundedCornerShape(topStart = 16.dp, topEnd = 16.dp),
-    val sheetBackgroundColor: Color,
-    val contentModifier: Modifier,
+data class ForceUpdateStyle(
+    val background: Color,
     val titleModifier: Modifier,
     val titleStyle: TextStyle,
+    val imageModifier: Modifier,
     val descriptionModifier: Modifier,
     val descriptionStyle: TextStyle,
     val updateButtonModifier: Modifier,
@@ -25,32 +25,25 @@ data class MediumUpdateDialogStyle(
     val updateButtonColors: ButtonColors,
     val updateButtonTextModifier: Modifier,
     val updateButtonTextStyle: TextStyle,
-    val cancelButtonModifier: Modifier,
-    val cancelButtonShape: Shape = RoundedCornerShape(48.dp),
-    val cancelButtonColors: ButtonColors,
-    val cancelButtonTextModifier: Modifier,
-    val cancelButtonTextStyle: TextStyle,
 ) {
     companion object {
         @Composable
-        fun create() = MediumUpdateDialogStyle(
-            sheetBackgroundColor = MaterialTheme.colors.background,
-            contentModifier = Modifier.padding(16.dp),
+        fun create() = ForceUpdateStyle(
+            background = MaterialTheme.colors.background,
             titleModifier = Modifier.padding(vertical = 8.dp),
-            titleStyle = MaterialTheme.typography.h5,
+            titleStyle = MaterialTheme.typography.h4,
+            imageModifier = Modifier.padding(16.dp),
             descriptionModifier = Modifier.padding(vertical = 8.dp),
             descriptionStyle = MaterialTheme.typography.body1,
-            updateButtonModifier = Modifier.padding(all = 8.dp),
+            updateButtonModifier = Modifier
+                .padding(all = 8.dp)
+                .fillMaxWidth(),
             updateButtonColors = ButtonDefaults.outlinedButtonColors(
                 backgroundColor = MaterialTheme.colors.primaryVariant,
                 contentColor = MaterialTheme.colors.surface
             ),
             updateButtonTextModifier = Modifier.padding(vertical = 4.dp, horizontal = 48.dp),
             updateButtonTextStyle = MaterialTheme.typography.button,
-            cancelButtonModifier = Modifier.padding(all = 8.dp),
-            cancelButtonColors = ButtonDefaults.outlinedButtonColors(),
-            cancelButtonTextModifier = Modifier.padding(vertical = 4.dp, horizontal = 48.dp),
-            cancelButtonTextStyle = MaterialTheme.typography.button,
         )
     }
 }

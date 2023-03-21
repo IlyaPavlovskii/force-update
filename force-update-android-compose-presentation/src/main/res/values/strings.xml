@@ -2,6 +2,9 @@
 <resources>
     <string name="force_update__medium_title">Update available</string>
     <string name="force_update__medium_description">New update is available. Recommends you to update to the latest version.</string>
+    <string name="force_update__force_title">Update available</string>
+    <string name="force_update__force_description">New update is available. Recommends you to update to the latest version.</string>
+    <string name="force_update__force_icon_content_description">Force update content description</string>
     <string name="force_update__button_update">Update</string>
     <string name="force_update__button_cancel">Cancel</string>
 </resources>

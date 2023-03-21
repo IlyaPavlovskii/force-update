@@ -12,14 +12,14 @@
         android:supportsRtl="true"
         android:name=".ForceUpdateApplication"
         android:forceDarkAllowed="true"
-        android:theme="@style/Theme.ChangeThemeSample"
+        android:theme="@style/Theme.ForceUpdateSample"
         tools:targetApi="q"
         >
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.ChangeThemeSample"
+            android:theme="@style/Theme.ForceUpdateSample"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
