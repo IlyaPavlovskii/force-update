@@ -1,6 +1,7 @@
 plugins {
     id("multiplatform-library-convention")
     id("publish-library-convention")
+    alias(libs.plugins.org.jetbrains.kotlin.serialization)
 }
 
 android {
@@ -15,9 +16,9 @@ android {
 dependencies {
     androidMainImplementation(libs.androidx.appcompat)
     androidMainImplementation(libs.androidx.compose.runtime)
-
-    implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.compose.material3)
+    androidMainImplementation(platform(libs.firebase.bom))
+    androidMainImplementation(libs.firebase.config.ktx)
+    androidMainImplementation(libs.org.jetbrains.kotlinx.kotlinx.serialization.json)
 
     commonMainImplementation(libs.mpp.kotlinx.coroutines)
 }

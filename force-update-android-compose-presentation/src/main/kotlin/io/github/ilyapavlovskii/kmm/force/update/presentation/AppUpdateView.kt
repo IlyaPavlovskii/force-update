@@ -33,6 +33,5 @@ internal fun ForceUpdateView(
                 style = forceUpdateStyle,
                 onForceUpdateCLick = onForceUpdateCLick,
             )
-
     }
 }

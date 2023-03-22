@@ -3,6 +3,7 @@ kotlinVersion = "1.8.10"
 coroutinesVersion = "1.6.4"
 # multiplatform
 kermitVersion = "1.2.2"
+org-jetbrains-kotlinx-serialization-json = "1.4.1"
 
 # android
 androidGradlePluginVersion = "7.4.0"
@@ -39,6 +40,14 @@ androidx-compose-material3 = { module = "androidx.compose.material3:material3" }
 androidx-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
 androidx-compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest" }
 
+firebase-bom = { module = "com.google.firebase:firebase-bom", version = "31.1.1" }
+firebase-config-ktx = { module = "com.google.firebase:firebase-config-ktx" }
+
 #===========GRADLE PLUGINS ARTIFACTS===========#
 plugin-kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlinVersion" }
 plugin-android-gradle = { module = "com.android.tools.build:gradle", version.ref = "androidGradlePluginVersion" }
+
+org-jetbrains-kotlinx-kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "org-jetbrains-kotlinx-serialization-json"}
+
+[plugins]
+org-jetbrains-kotlin-serialization = "org.jetbrains.kotlin.plugin.serialization:1.8.0-RC2"

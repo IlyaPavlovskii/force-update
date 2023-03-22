@@ -37,8 +37,8 @@ subprojects {
             }
         }
     }
-    group = "io.github.ilyapavlovskii.kmm.change.theme"
-    version = "2023.02.10"
+    group = "io.github.ilyapavlovskii.kmm.force.update"
+    version = "2023.03.22"
 
     setupJavaTarget(this)
 }

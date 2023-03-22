@@ -15,13 +15,6 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven {
-            url = uri("https://maven.pkg.github.com/IlyaPavlovskii/koin-v3-utils")
-            credentials {
-                username = githubProperties.getProperty("github_username")
-                password = githubProperties.getProperty("github_password")
-            }
-        }
     }
 }
 

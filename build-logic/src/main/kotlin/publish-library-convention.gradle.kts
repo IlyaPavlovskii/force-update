@@ -24,13 +24,14 @@ fun readGithubProperties(): Properties {
 publishing {
     repositories {
         maven {
-            url = uri("https://maven.pkg.github.com/IlyaPavlovskii/change-theme")
+            url = uri("https://maven.pkg.github.com/IlyaPavlovskii/force-update")
             val githubProperties: Properties = readGithubProperties()
             credentials {
                 username = githubProperties.getProperty("github_username")
                 password = githubProperties.getProperty("github_password")
             }
         }
+        mavenLocal()
     }
 }
 
@@ -42,15 +43,15 @@ mavenPublishing {
     )
 
     pom {
-        name.set("ipavlovskii-change-theme")
-        description.set("Simple KMM library to change application theme")
+        name.set("ipavlovskii-force-update")
+        description.set("Simple KMM library to support force update")
         inceptionYear.set("2023")
-        url.set("https://github.com/IlyaPavlovskii/change-theme")
+        url.set("https://github.com/IlyaPavlovskii/force-update")
         licenses {
             license {
                 name.set("Apache 2.0 License")
-                url.set("https://github.com/IlyaPavlovskii/change-theme/blob/master/LICENSE.md")
-                distribution.set("https://github.com/IlyaPavlovskii/change-theme/blob/master/LICENSE.md")
+                url.set("https://github.com/IlyaPavlovskii/force-update/blob/master/LICENSE.md")
+                distribution.set("https://github.com/IlyaPavlovskii/force-update/blob/master/LICENSE.md")
             }
         }
         developers {
@@ -61,9 +62,9 @@ mavenPublishing {
             }
         }
         scm {
-            url.set("https://github.com/IlyaPavlovskii/change-theme")
-            connection.set("scm:git:github.com/IlyaPavlovskii/change-theme.git")
-            developerConnection.set("scm:git:ssh://github.com/IlyaPavlovskii/change-theme.git")
+            url.set("https://github.com/IlyaPavlovskii/force-update")
+            connection.set("scm:git:github.com/IlyaPavlovskii/force-update.git")
+            developerConnection.set("scm:git:ssh://github.com/IlyaPavlovskii/force-update.git")
         }
     }
 }

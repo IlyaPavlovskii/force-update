@@ -5,7 +5,7 @@ plugins {
 android {
     namespace = "io.github.ilyapavlovskii.kmm.force.update.sample"
     defaultConfig {
-        applicationId = "io.github.ilyapavlovskii.kmm.change.theme.sample"
+        applicationId = "io.github.ilyapavlovskii.kmm.force.update.sample"
     }
 }
 

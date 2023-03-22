@@ -10,7 +10,6 @@ class SimpleGetForceUpdateEventFlowUseCase : GetForceUpdateEventFlowUseCase {
     override val event: StateFlow<ForceUpdateType> = _event
 
     fun update(event: ForceUpdateType) {
-        println("ForceUpdateScreen. set: $event")
         this._event.value = event
     }
 }
