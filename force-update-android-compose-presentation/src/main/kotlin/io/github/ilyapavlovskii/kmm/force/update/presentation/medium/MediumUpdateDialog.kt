@@ -14,10 +14,8 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
 import io.github.ilyapavlovskii.kmm.force.update.presentation.R
 import io.github.ilyapavlovskii.kmm.force.update.presentation.stringFromAttribute
-import io.github.ilyapavlovskii.kmm.force.update.ui.ForceUpdateTheme
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterialApi::class)
@@ -113,14 +111,14 @@ private fun MediumUpdateDialogContent(
     }
 }
 
-@Preview
-@Composable
-private fun PreviewMediumUpdateDialog() {
-    ForceUpdateTheme {
-        MediumUpdateDialogContent(
-            style = MediumUpdateDialogStyle.create(),
-            onMediumUpdateClick = {},
-            onCancelListener = {},
-        )
-    }
-}
+// @Preview
+// @Composable
+// private fun PreviewMediumUpdateDialog() {
+//     ForceUpdateTheme {
+//         MediumUpdateDialogContent(
+//             style = MediumUpdateDialogStyle.create(),
+//             onMediumUpdateClick = {},
+//             onCancelListener = {},
+//         )
+//     }
+// }

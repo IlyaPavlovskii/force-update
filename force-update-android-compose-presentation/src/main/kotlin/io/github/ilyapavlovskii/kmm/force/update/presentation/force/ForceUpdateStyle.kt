@@ -5,7 +5,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.ButtonColors
 import androidx.compose.material.ButtonDefaults
-import androidx.compose.material.MaterialTheme
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -29,21 +29,21 @@ data class ForceUpdateStyle(
     companion object {
         @Composable
         fun create() = ForceUpdateStyle(
-            background = MaterialTheme.colors.background,
+            background = MaterialTheme.colorScheme.background,
             titleModifier = Modifier.padding(vertical = 8.dp),
-            titleStyle = MaterialTheme.typography.h4,
+            titleStyle = MaterialTheme.typography.headlineLarge,
             imageModifier = Modifier.padding(16.dp),
             descriptionModifier = Modifier.padding(vertical = 8.dp),
-            descriptionStyle = MaterialTheme.typography.body1,
+            descriptionStyle = MaterialTheme.typography.titleMedium,
             updateButtonModifier = Modifier
                 .padding(all = 8.dp)
                 .fillMaxWidth(),
             updateButtonColors = ButtonDefaults.outlinedButtonColors(
-                backgroundColor = MaterialTheme.colors.primaryVariant,
-                contentColor = MaterialTheme.colors.surface
+                backgroundColor = MaterialTheme.colorScheme.primary,
+                contentColor = MaterialTheme.colorScheme.surface
             ),
-            updateButtonTextModifier = Modifier.padding(vertical = 4.dp, horizontal = 48.dp),
-            updateButtonTextStyle = MaterialTheme.typography.button,
+            updateButtonTextModifier = Modifier.padding(vertical = 4.dp, horizontal = 60.dp),
+            updateButtonTextStyle = MaterialTheme.typography.titleMedium,
         )
     }
 }

@@ -4,7 +4,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.ButtonColors
 import androidx.compose.material.ButtonDefaults
-import androidx.compose.material.MaterialTheme
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -34,23 +34,25 @@ data class MediumUpdateDialogStyle(
     companion object {
         @Composable
         fun create() = MediumUpdateDialogStyle(
-            sheetBackgroundColor = MaterialTheme.colors.background,
+            sheetBackgroundColor = MaterialTheme.colorScheme.background,
             contentModifier = Modifier.padding(16.dp),
             titleModifier = Modifier.padding(vertical = 8.dp),
-            titleStyle = MaterialTheme.typography.h5,
+            titleStyle = MaterialTheme.typography.headlineLarge,
             descriptionModifier = Modifier.padding(vertical = 8.dp),
-            descriptionStyle = MaterialTheme.typography.body1,
+            descriptionStyle = MaterialTheme.typography.titleMedium,
             updateButtonModifier = Modifier.padding(all = 8.dp),
             updateButtonColors = ButtonDefaults.outlinedButtonColors(
-                backgroundColor = MaterialTheme.colors.primaryVariant,
-                contentColor = MaterialTheme.colors.surface
+                backgroundColor = MaterialTheme.colorScheme.primary,
+                contentColor = MaterialTheme.colorScheme.surface
             ),
-            updateButtonTextModifier = Modifier.padding(vertical = 4.dp, horizontal = 48.dp),
-            updateButtonTextStyle = MaterialTheme.typography.button,
+            updateButtonTextModifier = Modifier.padding(vertical = 4.dp, horizontal = 60.dp),
+            updateButtonTextStyle = MaterialTheme.typography.titleMedium,
             cancelButtonModifier = Modifier.padding(all = 8.dp),
-            cancelButtonColors = ButtonDefaults.outlinedButtonColors(),
-            cancelButtonTextModifier = Modifier.padding(vertical = 4.dp, horizontal = 48.dp),
-            cancelButtonTextStyle = MaterialTheme.typography.button,
+            cancelButtonColors = ButtonDefaults.outlinedButtonColors(
+                contentColor = MaterialTheme.colorScheme.onSurfaceVariant,
+            ),
+            cancelButtonTextModifier = Modifier.padding(vertical = 4.dp, horizontal = 60.dp),
+            cancelButtonTextStyle = MaterialTheme.typography.titleMedium,
         )
     }
 }

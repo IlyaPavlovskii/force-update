@@ -10,13 +10,11 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import io.github.ilyapavlovskii.kmm.force.update.presentation.R
 import io.github.ilyapavlovskii.kmm.force.update.presentation.imageBitmapFromAttribute
 import io.github.ilyapavlovskii.kmm.force.update.presentation.imageVectorFromAttribute
 import io.github.ilyapavlovskii.kmm.force.update.presentation.stringFromAttribute
-import io.github.ilyapavlovskii.kmm.force.update.ui.ForceUpdateTheme
 
 @Composable
 internal fun ForceUpdateView(
@@ -76,13 +74,13 @@ internal fun ForceUpdateView(
     }
 }
 
-@Preview
-@Composable
-private fun PreviewForceUpdateView() {
-    ForceUpdateTheme {
-        ForceUpdateView(
-            style = ForceUpdateStyle.create(),
-            onForceUpdateCLick = {},
-        )
-    }
-}
+// @Preview
+// @Composable
+// private fun PreviewForceUpdateView() {
+//     ForceUpdateTheme {
+//         ForceUpdateView(
+//             style = ForceUpdateStyle.create(),
+//             onForceUpdateCLick = {},
+//         )
+//     }
+// }
