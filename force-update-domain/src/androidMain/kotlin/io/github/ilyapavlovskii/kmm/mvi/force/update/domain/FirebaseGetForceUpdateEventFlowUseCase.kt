@@ -7,12 +7,12 @@ import com.google.firebase.remoteconfig.ktx.remoteConfig
 import com.google.firebase.remoteconfig.ktx.remoteConfigSettings
 import io.github.ilyapavlovskii.kmm.force.update.model.ForceUpdateType
 import io.github.ilyapavlovskii.kmm.force.update.usecase.GetForceUpdateEventFlowUseCase
+import io.github.ilyapavlovskii.kmm.mvi.force.update.model.AppUpdatePriority
+import io.github.ilyapavlovskii.kmm.mvi.force.update.model.AppUpdateTransferModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
-import io.github.ilyapavlovskii.kmm.mvi.force.update.model.AppUpdatePriority
-import io.github.ilyapavlovskii.kmm.mvi.force.update.model.AppUpdateTransferModel
 import kotlin.time.Duration
 import kotlin.time.Duration.Companion.hours
 import kotlin.time.Duration.Companion.seconds
@@ -61,6 +61,8 @@ class FirebaseGetForceUpdateEventFlowUseCase(
                 json.decodeFromString<AppUpdateTransferModel>(jsonString)
             }.onSuccess { transferModel ->
                 updateEventIfNeeded(transferModel)
+            }.onFailure { ex ->
+                Log.e(TAG, "Parse jsonModel error", ex)
             }
         }
     }

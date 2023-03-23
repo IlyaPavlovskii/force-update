@@ -118,10 +118,17 @@ To start working with Firebase, we have prepared the next implementation `Fireba
 ```json
 key = "app_update"
 {
-  "priority": "medium",
-  "version_code": "9"
+  "priority": "medium", // string value
+  "version_code": 9 // integer value
 }
 ```
+
+And don't forget to update your proguard file on release version:
+
+```
+-keep class io.github.ilyapavlovskii.kmm.mvi.force.update.model.* { *; }
+```
+
 That means, application shows medium pop-up dialog with proposal to update application when user start it.
 Possible priorities: `low`(without implementation), `medium`(shows pop-up dialog), `hight`(shows non-closable screen to force user update application before usage).
 
