@@ -38,7 +38,7 @@ subprojects {
         }
     }
     group = "io.github.ilyapavlovskii.kmm.force.update"
-    version = "2023.03.24"
+    version = "2023.03.25"
 
     setupJavaTarget(this)
 }

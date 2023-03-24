@@ -18,8 +18,10 @@ data class MediumUpdateDialogStyle(
     val contentModifier: Modifier,
     val titleModifier: Modifier,
     val titleStyle: TextStyle,
+    val titleColor: Color,
     val descriptionModifier: Modifier,
     val descriptionStyle: TextStyle,
+    val descriptionColor: Color,
     val updateButtonModifier: Modifier,
     val updateButtonShape: Shape = RoundedCornerShape(48.dp),
     val updateButtonColors: ButtonColors,
@@ -34,12 +36,14 @@ data class MediumUpdateDialogStyle(
     companion object {
         @Composable
         fun create() = MediumUpdateDialogStyle(
-            sheetBackgroundColor = MaterialTheme.colorScheme.background,
+            sheetBackgroundColor = MaterialTheme.colorScheme.surfaceVariant,
             contentModifier = Modifier.padding(16.dp),
             titleModifier = Modifier.padding(vertical = 8.dp),
             titleStyle = MaterialTheme.typography.headlineLarge,
+            titleColor = MaterialTheme.colorScheme.onSurfaceVariant,
             descriptionModifier = Modifier.padding(vertical = 8.dp),
             descriptionStyle = MaterialTheme.typography.titleMedium,
+            descriptionColor = MaterialTheme.colorScheme.onSurfaceVariant,
             updateButtonModifier = Modifier.padding(all = 8.dp),
             updateButtonColors = ButtonDefaults.outlinedButtonColors(
                 backgroundColor = MaterialTheme.colorScheme.primary,
@@ -49,7 +53,8 @@ data class MediumUpdateDialogStyle(
             updateButtonTextStyle = MaterialTheme.typography.titleMedium,
             cancelButtonModifier = Modifier.padding(all = 8.dp),
             cancelButtonColors = ButtonDefaults.outlinedButtonColors(
-                contentColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                backgroundColor = MaterialTheme.colorScheme.onBackground,
+                contentColor = MaterialTheme.colorScheme.surface
             ),
             cancelButtonTextModifier = Modifier.padding(vertical = 4.dp, horizontal = 60.dp),
             cancelButtonTextStyle = MaterialTheme.typography.titleMedium,

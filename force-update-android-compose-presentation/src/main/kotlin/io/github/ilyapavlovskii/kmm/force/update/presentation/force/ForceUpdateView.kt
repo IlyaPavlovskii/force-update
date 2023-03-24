@@ -32,6 +32,7 @@ internal fun ForceUpdateView(
             text = stringFromAttribute(attributeId = R.attr.force_update__force_title)
                 ?: stringResource(R.string.force_update__force_title),
             style = style.titleStyle,
+            color = style.titleColor,
         )
         imageVectorFromAttribute(attributeId = R.attr.force_update__force_icon_vector)
             ?.also { imageVector ->
@@ -57,6 +58,7 @@ internal fun ForceUpdateView(
             text = stringFromAttribute(attributeId = R.attr.force_update__force_description)
                 ?: stringResource(R.string.force_update__force_description),
             style = style.descriptionStyle,
+            color = style.descriptionColor,
         )
         OutlinedButton(
             onClick = onForceUpdateCLick,

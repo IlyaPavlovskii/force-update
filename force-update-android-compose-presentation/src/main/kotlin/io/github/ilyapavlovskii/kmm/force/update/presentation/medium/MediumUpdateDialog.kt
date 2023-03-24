@@ -75,12 +75,14 @@ private fun MediumUpdateDialogContent(
             text = stringFromAttribute(attributeId = R.attr.force_update__medium_title)
                 ?: stringResource(R.string.force_update__medium_title),
             style = style.titleStyle,
+            color = style.titleColor,
         )
         Text(
             modifier = style.descriptionModifier,
             text = stringFromAttribute(attributeId = R.attr.force_update__medium_description)
                 ?: stringResource(R.string.force_update__medium_description),
             style = style.descriptionStyle,
+            color = style.descriptionColor,
         )
         OutlinedButton(
             onClick = onMediumUpdateClick,

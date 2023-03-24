@@ -17,9 +17,11 @@ data class ForceUpdateStyle(
     val background: Color,
     val titleModifier: Modifier,
     val titleStyle: TextStyle,
+    val titleColor: Color,
     val imageModifier: Modifier,
     val descriptionModifier: Modifier,
     val descriptionStyle: TextStyle,
+    val descriptionColor: Color,
     val updateButtonModifier: Modifier,
     val updateButtonShape: Shape = RoundedCornerShape(48.dp),
     val updateButtonColors: ButtonColors,
@@ -32,9 +34,11 @@ data class ForceUpdateStyle(
             background = MaterialTheme.colorScheme.background,
             titleModifier = Modifier.padding(vertical = 8.dp),
             titleStyle = MaterialTheme.typography.headlineLarge,
+            titleColor = MaterialTheme.colorScheme.onSurfaceVariant,
             imageModifier = Modifier.padding(16.dp),
             descriptionModifier = Modifier.padding(vertical = 8.dp),
             descriptionStyle = MaterialTheme.typography.titleMedium,
+            descriptionColor = MaterialTheme.colorScheme.onSurfaceVariant,
             updateButtonModifier = Modifier
                 .padding(all = 8.dp)
                 .fillMaxWidth(),
